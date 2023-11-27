@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+
+    <div class="container">
+       <div class="row">
+            <div class="col-sm-12 col-lg-12">
+              <div class="card-body">
+                <h1 class="card-title" align="center" >Create New To Do List</h1>
+                <h3 class="card-text" align="center">Add items to your list</h3>
+              </div>
+            </div>
+       </div>
+    </div>
+  <style>
+    .card-body{
+     background-color: #DAF7A6
+    }
+    body{
+    background-color: #BDB76B
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="form-check">
+    {% for e in element: %}
+        <p> <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+  </label>{{e}}<a href="{{url_for('delete_item', item=e)}}">✘</a></p>
+    {% endfor %}
+    <div class="container">
+          <p class="copyright">2023 All Rights Reserved. <a href="https://github.com/Mar4eIvanova">Mariya Ivanova</a></p>
+    </div>
+  </div>
+</body>
+</html>

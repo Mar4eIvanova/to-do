@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+{% from 'bootstrap5/form.html' import render_form %}
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+
+<div class="container">
+       <div class="row">
+            <div class="col-sm-12 col-lg-12">
+              <div class="card-body">
+                <h1 class="card-title" align="center" >Create New To Do List</h1>
+                <h3 class="card-text" align="center">Add items to your list</h3>
+              </div>
+            </div>
+       </div>
+    </div>
+  <style>
+    .card-body{
+     background-color: #DAF7A6
+    }
+    body{
+    background-color: #BDB76B
+    }
+
+  </style>
+</head>
+<body>
+{{ render_form(form) }}
+
+  <div class="container">
+          <p class="copyright">2023 All Rights Reserved. <a href="https://github.com/Mar4eIvanova">Mariya Ivanova</a></p>
+  </div>
+
+</body>
+</html>
+
